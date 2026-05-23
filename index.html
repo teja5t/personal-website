@@ -1,27 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tejas Tirthapura</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <h1>Tejas Tirthapura</h1>
-  <p class="tagline">Software Engineer, Musician</p>
+---
+layout: default
+---
+<h1>Tejas Tirthapura</h1>
+<p class="tagline">Software Engineer, Musician</p>
 
-  <h2>About</h2>
-  <p>
-    Hi, I'm Tejas. I build software and play the viola.
-  </p>
-  <p>
-    Currently based in [City]. Previously at [Company / School].
-  </p>
+<h2>About</h2>
+<p>
+  Hi, I'm Tejas! I am currently a CS major at Columbia and I also play viola in the Columbia-Juilliard program. Feel free to reach out to me at tirthapuratejas@gmail.com.
+</p>
+<p>
+  Currently based in [City]. Previously at [Company / School].
+</p>
 
-  <div class="links">
-    <a href="mailto:tirthapuratejas@gmail.com">Email</a>
-    <a href="https://github.com/teja5t" target="_blank" rel="noopener">GitHub</a>
-    <a href="https://linkedin.com/in/tejas-tirthapura" target="_blank" rel="noopener">LinkedIn</a>
-  </div>
-</body>
-</html>
+<h2>Writing</h2>
+{% for post in site.posts %}
+<div class="post-item">
+  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  <span class="post-item-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+</div>
+{% endfor %}
+
+<div class="links">
+  <a href="mailto:tirthapuratejas@gmail.com">Email</a>
+  <a href="https://github.com/teja5t" target="_blank" rel="noopener">GitHub</a>
+  <a href="https://linkedin.com/in/tejas-tirthapura" target="_blank" rel="noopener">LinkedIn</a>
+</div>
